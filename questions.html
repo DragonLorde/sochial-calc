@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калкулятор</title>
+    <script src="https://unpkg.com/cookielib/src/cookie.min.js"></script>
+    <script src="https://unpkg.com/docx@6.0.0/build/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.js"></script>
+
+    <link rel="stylesheet" href="style/ques.css">
+    <link rel="stylesheet" href="style/build.css">
+    <link rel="stylesheet" href="style/bar.css">
+</head>
+<body>
+    <div class="reslide ">
+        <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+    </div>
+    <div class="wrapper">
+        <div class="bar__menu ">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="menu nav__hide">
+            <div class="menu__bar">
+                <ol>
+                    <li><button onclick="reslide('/questions.html')">Пройти тест заново</button></li>
+                    <li><button onclick="deleteCookie('uuid'); reslide('/login.html')">Выйти из аккаунта</button></li>
+                    <li><button onclick="reslide('/')">Вернуться на главную</button></li>
+                </ol>
+            </div>
+        </div>
+        <div class="ques ">
+          <div class="proggres">
+              <div class="proggres__bar"></div>
+          </div>
+            <div class="ques__column col1 ">
+                <div class="ques__row male">
+                    <div class="ques__text">
+                        <p>Вопрос #1</p>
+                        <p>Ваша жена в положении ?</p>
+                    </div>
+                    <div class="ques__button">
+                        <button value="1" name="pregant">Да</button>
+                        <button value="0" name="pregant">Нет</button>
+                    </div>
+                </div>
+                <div class="ques__row hide__slide male">
+                    <div class="ques__text">
+                        <p>Вопрос #2</p>
+                        <p>Есть ли у вас медецинаская страховка ?</p>
+                    </div>
+                    <div class="ques__button">
+                        <button value="1" name="insurance">Да</button>
+                        <button value="0" name="insurance">Нет</button>
+                    </div>
+                </div>
+                <div class="ques__row hide__slide male">
+                    <div class="ques__text">
+                        <p>Вопрос #3</p>
+                        <p>Находитесь ли вы на военной службе ?</p>
+                    </div>
+                    <div class="ques__button">
+                        <button value="1" name="army">Да</button>
+                        <button value="0" name="army">Нет</button>
+                    </div>
+                </div>
+                <div class="ques__row hide__slide male ">
+                    <div class="ques__text">
+                        <p>Вопрос #4</p>
+                        <p>Работаете вы или ваша жена оффициально ?</p>
+                    </div>
+                    <div class="ques__button">
+                        <button value="1" name="empolyd">Да</button>
+                        <button value="0" name="empolyd">Нет</button>
+                    </div>
+                </div>
+            </div>
+            <div class="ques__column col2 hide__q">
+            <div class="ques__row">
+                <div class="ques__text">
+                    <p>Вопрос #1</p>
+                    <p>Вы в положении ?</p>
+                </div>
+                <div class="ques__button">
+                    <button>Да</button>
+                    <button>Нет</button>
+                </div>
+            </div>
+            <div class="ques__row">
+                <div class="ques__text">
+                    <p>Вопрос #2</p>
+                    <p>Есть ли у вас медецинаская страховка ?</p>
+                </div>
+                <div class="ques__button">
+                    <button>Да</button>
+                    <button>Нет</button>
+                </div>
+            </div>
+            <div class="ques__row">
+                <div class="ques__text">
+                    <p>Вопрос #3</p>
+                    <p>Находитесь ли ваш муж на военной службе ?</p>
+                </div>
+                <div class="ques__button">
+                    <button>Да</button>
+                    <button>Нет</button>
+                </div>
+            </div>
+            <div class="ques__row">
+                <div class="ques__text">
+                    <p>Вопрос #4</p>
+                    <p>Работаете вы или ваша муж оффициально ?</p>
+                </div>
+                <div class="ques__button">
+                    <button>Да</button>
+                    <button>Нет</button>
+                </div>
+            </div>
+            </div>
+      </div>
+      <div class="otvet hide__block">
+          <p class="otvet__title">Меры социальной поддержки котороые вы можете получить</p>
+            <div class="otvet__box">
+            </div>
+            <a href="info.html">Посмотреть больше ифнормции</a>
+            <a href="/profile.html">Вернуться в Профиль</a>
+      </div>
+    </div>
+    <style>
+        .menu__bar ol li button {
+            width: 115px;
+            height: 112px;
+            background: #f2c71a00;
+            font-size: 28px;
+            color: black;
+            -webkit-transition: 0.4s;
+            transition: 0.4s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+        }
+    </style>
+    <script src="scripts/createDocx.js"></script>
+    <script src="scripts/menu.js"></script>
+    <script src="scripts/ques.js"></script>
+    <script src="scripts/bar.js"></script>
+    <script src="scripts/reslide.js"></script>
+    <script>
+        function generate(text, id) {
+          const doc = new docx.Document({
+            sections: [{
+              properties: {},
+              children: [
+                new docx.Paragraph({
+                  children: [
+                    new docx.TextRun({
+                      text: text,
+                      bold: false,
+                      
+                    }),
+                    new docx.TextRun({
+                        text: "  ",
+                      bold: true,
+                    }),
+                    new docx.TextRun({
+                      text: "Заявления на меры  социальной поддержки можно подать: — в электронной форме через Портал услуг Тюменской области или Единый портал государственных и муниципальных услуг, - лично через филиалы Многофункционального центра предоставления государственных и муниципальных услуг в Тюменской области, в сельской местности — через специалистов социальной службы. Подробную информацию о мерах социальной поддержки, предусмотренных действующим законодательством для семей с детьми, можно получить в телефонной справочной службе «Единый социальный телефон» по номеру 8 (3452) 6–8888–6, по телефонам Информационно-справочной службы Тюменской области — 8 (3452) 566-330, 88001001290, а также на Портале услуг Тюменской области, Едином портале государственных и муниципальных услуг. Размеры отдельных государственных пособий и компенсаций в Тюменской области в 2020 году Источник: Департамент социального развития Тюмнской области ",
+                      bold: true,
+                    }),
+                  ],
+                }),
+              ],
+            }]
+          });
+  
+          docx.Packer.toBlob(doc).then(blob => {
+            console.log(blob);
+            let docs = saveAs(blob, `${id}.docx`);
+            SendDoc(`${id}.docx`)
+          });
+        }
+
+
+      </script>
+  
+</body>
+</html>

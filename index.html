@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор мер социальной поддержки для семей с детьми</title>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/build.css">
+</head>
+<body>
+    <div class="reslide ">
+        <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+    </div>
+    <div class="wrapper">
+        <div class="bar__menu nav__hide">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="menu nav__hide">
+            <div class="menu__bar">
+                <ol>
+                    <li><button onclick="reslide('/login.html')">Войти</button></li>
+                    <li><a href="#service" class="cool-link ">О сервисе</a></li>
+                    <li><a href="#method" class="cool-link ">Цель сервиса</a></li>
+                    <li><a href="#raw" class="cool-link ">Меры поддержки</a></li>
+                    <li><a href="#ft" class="cool-link ">Связь с соц.опекой</a></li>
+                </ol>
+            </div>
+        </div>
+        <header class="header">
+            <nav class="header__nav">
+                <ol>
+                    <li><a href="#service" class="cool-link ">О сервисе</a></li>
+                    <li><a href="#method" class="cool-link ">Цель сервиса</a></li>
+                    <li><a href="#raw" class="cool-link ">Меры поддержки</a></li>
+                    <li><a href="#ft" class="cool-link ">Связь с соц.опекой</a></li>
+                    <li><button class="cool-link" onclick="reslide('/login.html')">Войти</button></li>
+                </ol>
+            </nav>
+        </header>
+        <div class="banner" >
+            <div class="banner__mask"></div>
+            <div class="banner__video">
+                <video autoplay loop muted>
+                    <source src="assets/video/v1.mp4" type="">
+                </video>
+            </div>
+            <div class="banner__info">
+                <p class="banner__title">
+                    Калькулятор мер <span class="write"></span> для семей с детьми
+                </p>
+                <p class="banner__text">
+                    <!-- social savior -->
+                </p>
+            </div>
+            <div class="banner__footer">
+                <div class="banner__column">
+                    <div class="banner__row">
+
+                    </div>
+                    <div class="banner__row">
+                        <p>Социальная поддержка для каждого!</p>
+                        <p>Поможем вам помочь себе</p>
+                    </div>
+                    <div class="banner__row">
+                        <p>Данный сервис поможет вам подобрать меру социальной поддержки по вашим критериям</p>
+                    </div>
+                    <a href="#service" class="banner__row">
+                        Scroll to discover
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="service" id="service">
+            <div class="service__column">
+                <div class="service__row">
+                    <div class="service__block">
+                        <p>1/03</p>
+                    </div>
+                </div>
+                <div class="service__row">
+                    <p>Социальная поддержка в РФ</p>
+                    <p>В Российской Федерации разрабатываются законы и госпрограммы, целью которых является социальная поддержка семей. Эти акты распространяются на всю территорию РФ.
+
+                        Однако некоторые субъекты в инициативном порядке расширяют перечни льготников исходя из конкретной ситуации. Соцподдержка направлена в первую очередь на тех, кто работает на государство — воспитывает его будущее, то есть детей.
+                        
+                        Кроме того, государство выполняет социальную функцию, а именно заботится о людях, которые не в состоянии сами справляться с трудностями нынешнего времени.</p>
+                </div>
+            </div>
+        </div>
+        <div class="method" id="method">
+            <div class="method__column">
+                <div class="method__row">
+                    <div class="method__block">
+                        <p>2/03</p>
+                    </div>
+                </div>
+                <div class="method__row">
+                    <p>Дети – приоритет</p>
+                    <p>В поправках в Конституцию РФ подчеркивается, что «дети являются важнейшим приоритетом государственной политики России. Государство создает условия, способствующие всестороннему духовному, нравственному, интеллектуальному и физическому развитию детей, воспитанию в них патриотизма, гражданственности и уважения к старшим. Государство, обеспечивая приоритет семейного воспитания, берет на себя обязанности родителей в отношении детей, оставшихся без попечения»</p>                </div>
+            </div>
+            <div class="method__img">
+                <div></div>
+            </div>
+        </div>
+        <div class="raw" id="raw">
+            <div class="raw__column">
+                <div class="raw__row">
+                    <div class="raw__block">
+                        <p>3/03</p>
+                    </div>
+                </div>
+                <div class="raw__row">
+                    <p>Меры поддержки со стороны государства</p>
+                    <p>Единовременное пособие при рождении ребёнка
+
+                        Ежемесячное пособие по уходу за ребенком до достижениям им полутора лет
+                        
+                        Ежемесячное пособие на ребенка военнослужащего, проходящего военную службу по призыву
+                        
+                        Ежемесячная выплата по уходу за ребёнком в возрасте от полутора до трёх лет
+                        
+                        В большинстве регионов выплачиваются дополнительно и свои пособия при рождении малыша. Узнать подробнее о них можно на сайте Фонда социального страхования и в управлении социальной защиты населения по месту проживания.</p>
+                        <button onclick="reslide('/login.html')">Получить меры</button>
+
+                </div>
+            </div>
+            <div class="raw__img">
+                <div></div>
+            </div>
+        </div>
+        <footer class="ft" id="ft">
+            <div class="ft__column">
+                <div class="ft__row">
+                    <img src="assets/svg/phone.svg" alt="">
+                    <a href="tel:8 (3452) 566-330"> 8 (3452) 566-330</a>
+                    <a href="tel:8 (3452) 6–8888–6">8 (3452) 6–8888–6</a>
+                </div>
+                <div class="ft__row">
+                    <img src="assets/svg/email.svg" alt="">
+                    <a href="mailto:Example@email.ru">Example@email.ru</a>
+                </div>
+                <div class="ft__row">
+                    <a href="assets/file/social.docx" download=""><img src="assets/svg/arrow.svg" alt="">Скачать</a>
+                </div>
+            </div>
+            <div class="ft__info">
+                <p>калькулятор
+                    имеет
+                    рекомендательный
+                    характер
+                    окончательное решение о назначении меры соц. поддержки
+                    можно получить на личном приеме у специалиста</p>
+            </div>
+        </footer>
+    </div>
+    <script src="scripts/anim.js"></script>
+    <script src="scripts/scrollanim.js"></script>
+    <script src="scripts/reslide.js"></script>
+</body>
+</html>

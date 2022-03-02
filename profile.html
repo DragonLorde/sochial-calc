@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/build.css">
+    <link rel="stylesheet" href="style/anim.css">
+    <link rel="stylesheet" href="style/profile.css">
+    <script src="https://unpkg.com/cookielib/src/cookie.min.js"></script>
+    <title>Профиль</title>
+</head>
+<body>
+    <div class="alert hide__alert">
+        <div class="alert__msg">
+            <p>Добатье ребенка(детей) для начала теста</p>
+            <button onclick="closeAlert()">ОК</button>
+            <button onclick="startNoChild()">У меня нет детей</button>
+        </div>
+    </div>
+    <div class="reslide ">
+        <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+    </div>
+    <div class="wrapper">
+        <div class="bar__menu ">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="menu nav__hide">
+            <div class="menu__bar">
+                <ol>
+                    <li><button onclick="StartTest()">Пройти тест</button></li>
+                    <li><button onclick="exitits()">Выйти из аккаунта</button></li>
+                    <li><button onclick="gl()">Вернуться на главную</button></li>
+                </ol>
+            </div>
+        </div>
+        <div class="profile">
+            <div class="profile__info">
+                <div class="profile__info-col">
+                    <div class="profile__info-row">
+
+                    </div>
+                    <div class="profile__info-row">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1>Добавить ребенка</h1>
+        <div class="child">
+            <form action="" class="form1">
+                <input type="text" required placeholder="Имя" name="first_name">
+                <input type="text" required placeholder="Фамилия" name="last_name">
+                <div class="child__form-col-sm">
+                    <div class="child__form-col">
+                        <p>Пол ребенка</p>
+                        <div class="child__form-row">
+                            <input type="radio" value="male" name="gender" required id="gn1" checked>
+                            <label for="gn1">Мужской</label>
+                            <input type="radio" value="Female" name="gender" id="gn2">
+                            <label for="gn2">Женский</label>
+                        </div>
+                    </div>
+                    <input type="number" min="0" max="16" placeholder="Возраст" name="age" required>
+                </div>
+                <button class="addChildbtn">Добавить</button>
+            </form>
+        </div>
+        <h1>Дети</h1>
+        <div class="childs">
+            
+            <div class="childs__column">
+                            
+            </div>
+        </div>
+        <div class="fam">
+            <p>Общий заработок семьи: <span class="fam__p"></span></p>
+        </div>
+    </div>
+
+    <style>
+        .menu__bar ol li button {
+            width: 125px;
+            height: 112px;
+            background: #f2c71a00;
+            font-size: 28px;
+            color: black;
+            -webkit-transition: 0.4s;
+            transition: 0.4s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+        }
+    </style>
+    <script src="scripts/reslide.js"></script>
+    <script src="scripts/menu.js"></script>
+    <script src="scripts/getuser.js"></script>
+    <script src="scripts/chek.js"></script>
+</body>
+</html>

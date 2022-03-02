@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style/build.css">
+    <link rel="stylesheet" href="style/login.css">
+
+    <script src="https://unpkg.com/cookielib/src/cookie.min.js"></script>
+
+</head>
+<body>
+     <div class="reslide ">
+        <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+    </div>
+    <div class="wrapper">
+        <div class="data">
+            <form action="" class="data__form form1 ">
+                <h1>Регистрация</h1>
+                <div class="data__hide">
+                    <input type="text" placeholder="Имя" name="first_name" autocomplete='off' required>
+                    <input type="text" placeholder="Фамилия" name="last_name" autocomplete="off" required>
+                    <input type="text" placeholder="Email" name="email" autocomplete="off" required>
+                    <input type="text" placeholder="Телефон" name="phone" autocomplete="off" required>
+                    <input type="text" placeholder="Пароль" name="pass" autocomplete="off" required>
+                    <div class="data__row">
+                    <div class="data__age">
+                            <p>Возраст</p>
+                            <input type="number" placeholder="18" min="18" max="100" name="age" value="18">
+                    </div>
+                        <div class="data__rad">
+                            <p>Ваш пол ?</p>
+                            <div class="data__rad-inp">
+                                <input type="radio" id="wom" checked name="gender" value="female" name="gender"> 
+                                <label for="wom">Женский</label>
+                                <input type="radio" id="men" name="gender" value="male" name="gender">
+                                <label for="men">Мужской</label>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Работаете ли вы оффициально</p>
+                    <div class="data__row-job">
+                        <input type="radio" id="no" checked name="job" value="1" name="job">
+                        <label for="no">Да</label>
+                        <input type="radio" id="yes" name="job" value="0" name="job">
+                        <label for="yes">Нет</label>
+                    </div>
+                    <button class="data__next">Далее</button>
+                </div>
+                <a href="/login.html">Есть аккаунт ?</a>
+            </form>
+            <form action="" class="data__form form2 hide__frm">
+                <p>У вас полная семья ?</p>
+                <div class="data__ques">
+                    <button class="nextPage" name="no" value="true">Да</button>
+                    <button class="nextPage" name="false" value="false">Нет</button>
+                </div>
+            </form>
+            <form action="" class="data__form form3 hide__frm">
+                <p>Введите доход ващей семьий</p>
+                <input type="number" placeholder="Ваш доход" min="0" required name="emply">
+                <input type="number" placeholder="Доход челна семьи"  min="0" name="emply">
+                <button>Завершить</button>
+            </form>
+            <form action="" class="data__form form4 hide__frm">
+                <p>Введите доход ващей семьий</p>
+                <input type="number" placeholder="Ваш доход" min="0" required name="emply">
+                <button class="close__form">Завершить</button>
+            </form>
+        </div>
+    </div>
+    <script src="scripts/reslide.js"></script>
+    <script src="scripts/forms.js"></script>
+    <script src="scripts/rerenderStatus.js"></script>
+    <script src="scripts/setCoockie.js"></script>
+</body>
+</html>

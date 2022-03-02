@@ -1,0 +1,15 @@
+.proggres {
+    width: 100%;
+    background: white;
+    left: 50%;
+    max-width: 60vh;
+    position: absolute;
+    top: 20%;
+    transform: translateX(-50%);
+    &__bar {
+        transition: 0.4s;
+        height: 8px;
+        background: red;
+        width: 0%;
+    }
+}

@@ -1,0 +1,19 @@
+.proggres {
+  width: 100%;
+  background: white;
+  left: 50%;
+  max-width: 60vh;
+  position: absolute;
+  top: 20%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.proggres__bar {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  height: 8px;
+  background: red;
+  width: 0%;
+}
+/*# sourceMappingURL=bar.css.map */
