@@ -1,0 +1,52 @@
+{
+    "User": {
+        "uuid": "",
+        "name": "",
+        "id": ""
+    },
+    "data": [
+        {
+            "question":"",
+            "answer": "",
+            "scores":""
+        },
+        {
+            "question":"",
+            "answer": "",
+            "scores":""
+        }
+    ]
+}
+
+
+{
+    "User": {
+        "uuid": "",
+        "id_q":""
+    },
+    "data": [
+        {
+            "question":"",
+            "answer": "",
+            "scores":""
+        },
+        {
+            "question":"",
+            "answer": "",
+            "scores":""
+        }
+    ]
+}
+
+{
+    "question": [
+        {
+            "name": "",
+            "id_q": ""
+        },
+        {
+            "name": "",
+            "id_q": ""
+        }
+    ]
+}

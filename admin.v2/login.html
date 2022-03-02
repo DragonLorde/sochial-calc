@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/imports/null.css">
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="styles/loaded.css">
+    <script src="https://unpkg.com/cookielib/src/cookie.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>Admin panel</title>
+</head>
+<body>
+    <div class="reslide ">
+        <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+    </div>
+    <div class="wrapper">
+        <div class="wrap">
+          <form action="" onsubmit="GetUser(); return false; ">
+              <input type="login" name="login" placeholder="Логин" required>
+              <input type="password" name="pass" placeholder="Пароль" required>
+              <button>Войти</button>
+
+          </form>
+        </div>
+    </div>
+    <script src="scripts/reslide.js"></script>
+    <script src="scripts/login.js"></script>
+</body>
+</html>
